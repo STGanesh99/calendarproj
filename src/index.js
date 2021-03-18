@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
-import Demo from "./demo";
+import Calendar from "./Calendar";
 
-render(<Demo />, document.getElementById("root"));
+render(<Calendar />, document.getElementById("root"));
 
