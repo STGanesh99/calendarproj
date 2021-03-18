@@ -10,7 +10,6 @@ import {
 } from '@devexpress/dx-react-scheduler-material-ui';
 
 
-
 const CellBase = (({
   startDate,
   formatDate,
@@ -18,10 +17,9 @@ const CellBase = (({
   const isFirstMonthDay = startDate.getDate() === 1;
   const formatOptions = isFirstMonthDay
     ? { day: 'numeric', month: 'long' }
-    : { day: 'numeric' }
+    : { day: 'numeric' };
   return (
     <TableCell
-      tabIndex={0}
     >
       <div>
         {formatDate(startDate, formatOptions)}
@@ -36,20 +34,21 @@ const CellBase = (({
 
 export default class Demo extends React.PureComponent {
   render() {
-
     return (
       <Paper>
         <Scheduler
         >
-        <ViewState
+          <ViewState
             defaultCurrentDate="2018-07-17"
           />
-          <Toolbar/>
-          <DateNavigator/>
+
           <MonthView
-           timeTableCellComponent={CellBase}
+          timeTableCellComponent={CellBase}
           />
-          </Scheduler>
+          <Toolbar
+          />
+          <DateNavigator />
+        </Scheduler>
       </Paper>
     );
   }
