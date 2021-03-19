@@ -89,9 +89,10 @@ export const styles = (theme) => ({
     paddingBottom: theme.spacing(2),
   },
   container: {
-    display: 'flex',
+    position:"flex",
     flexDirection: 'column',
-    alignItems:"center"
+    alignItems:"center",
+    textAlign:"center"
   },
   todayDate: {
     backgroundColor: "#FFFDE7",

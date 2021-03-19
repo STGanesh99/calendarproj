@@ -5,6 +5,7 @@ import Button from "@material-ui/core/Button";
 import { ViewState } from "@devexpress/dx-react-scheduler";
 import { styles } from "./CalendarCellStyles";
 import { withStyles } from "@material-ui/core";
+import Modal from "./Modal"
 
 import {
   Scheduler,
@@ -46,7 +47,7 @@ const CellBase = ({ classes, startDate, formatDate, otherMonth }) => {
         <div className={classes.text}>
           {formatDate(startDate, { day: "numeric" })}
         </div>
-        {!otherMonth && hoverState ? <Button>+ Add new Task</Button>: ''}
+        {!otherMonth && hoverState&&<Modal/>}
       </div>
     </TableCell>
   );
