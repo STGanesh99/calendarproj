@@ -47,7 +47,7 @@ const CellBase = ({ classes, startDate, formatDate, otherMonth }) => {
         <div className={classes.text}>
           {formatDate(startDate, { day: "numeric" })}
         </div>
-        {!otherMonth && hoverState&&<Modal/>}
+        {!otherMonth && hoverState&&<Modal hoverState = {hoverState} setHoverState={(t)=>setHoverState(t)}/>}
       </div>
     </TableCell>
   );

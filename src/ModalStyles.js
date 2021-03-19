@@ -1,4 +1,4 @@
-import { lightBlue } from '@material-ui/core/colors';
+
 import { makeStyles } from '@material-ui/core/styles';
  
  const styles = makeStyles((theme) => ({
@@ -12,7 +12,12 @@ import { makeStyles } from '@material-ui/core/styles';
         border: '2px solid #000',
         boxShadow: theme.shadows[5],
         padding: theme.spacing(2, 4, 3),
+      },
+      modalSize:{
+      
       }
+
+    
 }))
 
 export default styles
